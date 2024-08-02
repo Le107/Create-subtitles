@@ -3,7 +3,7 @@ from pathlib import Path
 from pydub import AudioSegment
 from scipy.io import wavfile
 
-os.chdir('DialogEN')
+os.chdir('Sound')
 
 def output_duration(length):
     hours = length // 3600  # calculate in hours
