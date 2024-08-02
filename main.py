@@ -34,4 +34,4 @@ for item in Path('.').glob('*.wav'):
                 print(dialog)
                 print('1', file=open(f'..\Srt\{res}.srt', 'a'))
                 print("00:00:00,000 -->", dur, file=open(f'..\Srt\{res}.srt', 'a'))
-                print(dialog, file=open(f'..\Srt\{res}.srt', 'a'))
+                print(dialog, file=open(f'..\Srt\{res}.srt', 'a', encoding='utf-8'))
