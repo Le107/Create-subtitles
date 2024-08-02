@@ -1,4 +1,3 @@
-
 import os
 from pathlib import Path
 from pydub import AudioSegment
@@ -20,6 +19,7 @@ for item in Path('.').glob('*.wav'):
     t = len_data / sample_rate
     hours, mins = output_duration(int(t))
     duration = len(audio) / 1000.0
-    dur = '{:02}:{:02}:{:06}'.format(hours, mins, duration)
+    dur = '{:02}:{:02}:{:06.3f} '.format(hours, mins, duration)
     dur = str(dur).replace(".", ",")
-    print(item, dur, file=open('output.txt', 'a'))
+    print(item, dur)
+    print(item, dur, file=open('..\output.txt', 'a'))
